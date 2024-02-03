@@ -3,9 +3,9 @@ import SearchForm from "./SearchForm";
 import ThemeToggle from "./ThemeToggle";
 const App = () => {
   return <>
+  <ThemeToggle/>
   <Gallery/>
   <SearchForm/>
-  <ThemeToggle/>
   </>
 };
 export default App;
