@@ -4,8 +4,8 @@ import ThemeToggle from "./ThemeToggle";
 const App = () => {
   return <>
   <ThemeToggle/>
-  <Gallery/>
   <SearchForm/>
+  <Gallery/>
   </>
 };
 export default App;

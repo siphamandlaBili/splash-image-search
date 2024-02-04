@@ -4,6 +4,8 @@ const context = createContext();
 
 export const AppProvider =({children})=>{
     const [isDarkTHeme,setDarkTheme] = useState(false);
+    const [input,setInput] = useState('');
+
     const toggleDarkTheme =()=>{
         const newDarkTheme = !isDarkTHeme
         setDarkTheme(newDarkTheme);
@@ -13,7 +15,14 @@ export const AppProvider =({children})=>{
         console.log(body)
        
     }
-    return <context.Provider value={{isDarkTHeme,setDarkTheme,toggleDarkTheme}}>
+
+    const formOnsubmit=(e)=>{
+        e.preventDefault()
+        console.log("form submited");
+        const data = {animal:input}
+        console.log(data)
+    }
+    return <context.Provider value={{isDarkTHeme,setDarkTheme,toggleDarkTheme,formOnsubmit,input,setInput}}>
         {children}
     </context.Provider>
 }

@@ -71,6 +71,7 @@ html {
   --backgroundColor: var(--darkModeBgColor);
   --textColor: var(--darkModeTextColor);
 }
+
 body {
   transition:  var(--darkModeTransition);
   background-color: var(--backgroundColor);
@@ -79,6 +80,15 @@ body {
     Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 400;
   line-height: 1;
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1a1a1a; /* Dark background color */
+    color: #ffffff; /* Light text color */
+  }
+
+  /* Additional styles for dark mode */
+  /* Add any other styles that should be applied in dark mode */
 }
 p {
   margin: 0;
