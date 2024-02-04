@@ -18,9 +18,6 @@ export const AppProvider =({children})=>{
 
     const formOnsubmit=(e)=>{
         e.preventDefault()
-        console.log("form submited");
-        const data = {animal:input}
-        console.log(data)
     }
     return <context.Provider value={{isDarkTHeme,setDarkTheme,toggleDarkTheme,formOnsubmit,input,setInput}}>
         {children}
