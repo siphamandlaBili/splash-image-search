@@ -5,11 +5,11 @@ import axios from "axios";
 
 const Gallery = () => {
 
-    const { data, mutable, isLoading, isError } = useQuery({
+    const { data, isLoading, isError } = useQuery({
         queryKey: ['getSplash'],
         queryFn: () => axios.get(`https://api.unsplash.com/search/photos?client_id=2HzWTLhcc5prDp959kJ9dOqS9tNrStbFCLxG4-DgY7I&query=south africa`)
     })
-
+    
     if (isLoading) {
         return <section className="image-container">
             <h4>loading ...</h4>
