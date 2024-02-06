@@ -3,12 +3,20 @@ import { isError, useQuery } from "react-query";
 import axios from "axios";
 
 
+const url = `https://api.unsplash.com/search/photos?client_id=2HzWTLhcc5prDp959kJ9dOqS9tNrStbFCLxG4-DgY7I`
+
 const Gallery = () => {
+   const {input} = useGlobalContext()
 
     const { data, isLoading, isError } = useQuery({
-        queryKey: ['getSplash'],
-        queryFn: () => axios.get(`https://api.unsplash.com/search/photos?client_id=2HzWTLhcc5prDp959kJ9dOqS9tNrStbFCLxG4-DgY7I&query=south africa`)
+        queryKey: ["cat",input],
+        queryFn: () => axios.get(`${url}&query=${input}`)
     })
+    if(input == ''){
+        return <section className="image-container">
+            <h4>Please enter a keyword or phrase to search...</h4>
+        </section>
+    }
     
     if (isLoading) {
         return <section className="image-container">

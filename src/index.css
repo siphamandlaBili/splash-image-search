@@ -81,15 +81,7 @@ body {
   font-weight: 400;
   line-height: 1;
 }
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: #1a1a1a; /* Dark background color */
-    color: #ffffff; /* Light text color */
-  }
 
-  /* Additional styles for dark mode */
-  /* Add any other styles that should be applied in dark mode */
-}
 p {
   margin: 0;
 }

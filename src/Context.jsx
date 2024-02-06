@@ -4,7 +4,10 @@ const context = createContext();
 
 export const AppProvider =({children})=>{
     const [isDarkTHeme,setDarkTheme] = useState(false);
-    const [input,setInput] = useState('');
+    const [input,setInput] = useState('cat');
+   
+
+    
 
     const toggleDarkTheme =()=>{
         const newDarkTheme = !isDarkTHeme
@@ -16,10 +19,7 @@ export const AppProvider =({children})=>{
        
     }
 
-    const formOnsubmit=(e)=>{
-        e.preventDefault()
-    }
-    return <context.Provider value={{isDarkTHeme,setDarkTheme,toggleDarkTheme,formOnsubmit,input,setInput}}>
+    return <context.Provider value={{isDarkTHeme,setDarkTheme,toggleDarkTheme,input,setInput}}>
         {children}
     </context.Provider>
 }
