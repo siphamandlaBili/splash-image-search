@@ -65,7 +65,7 @@ html {
   --darkModeTextColor: #f0f0f0;
   --backgroundColor: var(--grey-50);
   --textColor: var(var(--grey-900));
-  --darkModeTransition: color 0.5s ease-in-out,background-color 0.5s ease-in-out;
+  --darkModeTransition: color 0.1s ease-in-out,background-color 0.1s ease-in-out;
 }
 .dark-theme{
   --backgroundColor: var(--darkModeBgColor);
