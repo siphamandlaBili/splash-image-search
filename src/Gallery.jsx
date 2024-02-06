@@ -3,7 +3,7 @@ import { isError, useQuery } from "react-query";
 import axios from "axios";
 
 
-const url = `https://api.unsplash.com/search/photos?client_id=2HzWTLhcc5prDp959kJ9dOqS9tNrStbFCLxG4-DgY7I`
+const url = `https://api.unsplash.com/search/photos?client_id=${import.meta.env.VITE_API_KEY}`
 
 const Gallery = () => {
    const {input} = useGlobalContext()
